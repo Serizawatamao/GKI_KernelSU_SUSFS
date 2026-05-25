@@ -71,7 +71,7 @@ on:
 
 jobs:
   get_manager:
-    if: ${{ inputs.get_manager }}
+    if: ${{ inputs.get_manager && inputs.kernelsu_variant != 'ReSukiSU' }}
     uses: ./.github/workflows/get-manager.yml
     secrets: inherit
     with:

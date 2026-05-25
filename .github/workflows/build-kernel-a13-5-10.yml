@@ -65,7 +65,7 @@ jobs:
       use_kpm: ${{ inputs.use_kpm }}
       BBG: ${{ inputs.BBG || false }}
   get-ksu-manager:
-    if: ${{ inputs.get_manager }}
+    if: ${{ inputs.get_manager && inputs.kernelsu_variant != 'ReSukiSU' }}
     uses: ./.github/workflows/get-manager.yml
     secrets: inherit
     with:
