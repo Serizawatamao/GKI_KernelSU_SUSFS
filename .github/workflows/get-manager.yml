@@ -94,7 +94,7 @@ jobs:
           unzip *.zip
 
       - name: 上传编译资产
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ inputs.kernelsu_variant }}-Manager(${{ env.KSU_VERSION }})
           path: |
